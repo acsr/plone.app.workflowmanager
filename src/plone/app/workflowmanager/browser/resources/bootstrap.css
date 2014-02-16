@@ -5115,3 +5115,9 @@
   }
 
 }
+
+/* Green background emphasizing workflow permissions in tables*/
+.wm .table-striped tbody tr td.checked,
+.wm .table-striped tbody tr:nth-child(2n+1) td.checked {
+  background-color: #00ee00;
+}
