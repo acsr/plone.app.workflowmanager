@@ -144,7 +144,8 @@
                     <tal:permissions tal:repeat="perminfo view/managed_permissions">
                       <td class="listingCheckbox"
                           tal:define="info python: state.getPermissionInfo(perminfo['perm']);
-                                      checked python: role in info['roles'];">
+                                      checked python: role in info['roles'];"
+                          tal:attributes="class python: ' '.join(['listingCheckbox', (checked and 'checked' or '')])">
                         <input type="checkbox"
                             tal:attributes="name python: 'permission-%s-role-%s-state-%s' % (perminfo['name'], role, state.id);
                                             checked python: checked and 'checked' or '';
